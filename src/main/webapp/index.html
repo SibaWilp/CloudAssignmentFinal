@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Login page</title>
+</head>
+<body>
+	<h1>Assignment question1 :Login Page verification</h1>
+	<form name="login">
+		Username <input type="text" name="username" /></br> </br> 
+		Password <input type="password" name="pass" /></br> </br> </br> 
+				 <input type="button" onclick="check(this.form)" value="Login" />
+				 <input type="reset" value="Reset" />
+	</form>
+
+	<p id="login_result">***Display Login Result here***</p>
+
+	<script>
+		function check(form)/*function to check userid & password*/
+		{
+			/*the following code checkes whether the entered userid and password are matching*/
+			if (form.username.value == "siba"
+					&& form.pass.value == "password") {
+				document.getElementById("login_result").innerHTML = "Login Successfully";
+			} else {
+				document.getElementById("login_result").innerHTML = "Login failed due to incorrect username and password";
+			}
+		}
+	</script>
+</body>
+</html>
